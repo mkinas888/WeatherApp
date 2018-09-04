@@ -1,12 +1,13 @@
-<h1>Enter name and code city for weather forecast</h1>
-<div class="jumbotron">
-  <div class="form-group">
-    <label class="col-form-label" for="inputDefault">City name</label>
-    <input class="form-control" placeholder="Type city name" id="inputDefault" type="text" [(ngModel)] = "cityName">
-  </div>
-  <div class="form-group">
-    <label class="col-form-label" for="inputDefault">City code</label>
-    <input class="form-control" placeholder="Type city code" id="inputDefault" type="text" [(ngModel)] = "cityCode">
-  </div>
-  <button type="button" class="btn btn-success" (click) = "save()">Save</button>
+<h1 class="text-center font-weight-bold">Enter name and postcode <br> or only name of the city <br> for the weather forecast</h1>
+  <br><br>
+<div class="form-group">
+  <label class="col-form-label font-weight-bold" for="inputDefault">City name</label>
+  <input class="form-control" placeholder="Type city name" id="inputDefault" type="text" [(ngModel)] = "cityName" required="true">
 </div>
+<br>
+<div class="form-group">
+  <label class="col-form-label font-weight-bold" for="inputDefault">Postcode</label>
+  <input class="form-control" placeholder="Type postcode" id="inputDefault" type="text" [(ngModel)] = "cityCode">
+</div>
+<br>
+<button type="button" class="btn btn-success" (click) = "save()">Save</button>

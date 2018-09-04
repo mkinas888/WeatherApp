@@ -11,7 +11,7 @@ export class AppComponent {
   isDarkModeActive : boolean;
 
   ngOnInit() {
-    this.isDarkModeActive = false;
+    this.isDarkModeActive = this.isDarkModeActive;
   }
 
   toggleDarkMode() {

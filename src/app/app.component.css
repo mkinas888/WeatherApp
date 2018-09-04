@@ -11,11 +11,8 @@ main {
     max-width: 50px;
   }
 
-  .icon {
-    height: 0px;
-  }
-
   .main-bg {
+      background-size: 200%;
       background: white;
   }
 
@@ -32,7 +29,7 @@ main {
       color: white;
   }
 
-  .weather-card-dark {
+  .content-bg-dark {
     background-image: linear-gradient(to top, #87314e, #982c5d, #a82770, #b52286, #bf209f);
     padding: 2em;
     border: 0.5px rgba(0,0,255,.1);
@@ -42,7 +39,7 @@ main {
 
   
 
-  .weather-card {
+  .content-bg {
     padding: 2em;
     border: 0.5px rgba(0,0,255,.1);
     border-radius: 40px;
