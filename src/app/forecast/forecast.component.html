@@ -1,4 +1,4 @@
-<div class="container weather-card">
+<div class="container">
     <h1 class="text-center font-weight-bold"> <span>{{ weather.name }}</span> </h1>
     <div class="container text-center weather-icon" [ngSwitch]="true">
         <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '01d' || weather.weather[0].icon === '01n'" src="./../../assets/sunny.png">

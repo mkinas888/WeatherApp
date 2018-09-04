@@ -1,6 +1,6 @@
-  <div class="d-flex justify-content-center">
+  <div [ngClass]="{'main-bg-dark': isDarkModeActive}" class="d-flex justify-content-center main-bg">
     <!-- <header class="d-flex justify-content-center"> -->
-        <nav class="navbar navbar-expand-lg fixed-top p-0">
+        <nav [ngClass]="{'main-nav-dark': isDarkModeActive}" class="navbar navbar-expand-lg fixed-top p-0 main-nav">
             <div class="container">
                 <div class="navbar-brand mw-15 mh-15">
                     <img class="img-fluid logo" src="./../assets/icon.png" alt="">
@@ -14,7 +14,7 @@
                     </li>
                       <span class="nav-link text-primary">Light</span>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input (click)="toggleDarkMode()" type="checkbox">
                         <span class="slider round"></span>
                       </label>
                       <span class="nav-link text-primary">Dark</span>
@@ -22,8 +22,8 @@
             </div>
         </nav> 
     <!-- </header> -->
-    <main class="d-flex pt-5">
-        <div class="d-flex pt-5">
+    <main class="d-flex">
+        <div [ngClass]="{'weather-card-dark': isDarkModeActive}" class="d-flex pt-5 weather-card">
             <router-outlet></router-outlet>
         </div>
     </main>  
