@@ -1,8 +1,30 @@
-<h1 class="text-center primary">Weather Forecast Application</h1>
-<div class="container">
-  <a href="./forecast" class="btn btn-primary">Weather Forecast</a>
-  <a href="./city" class="btn btn-primary">Change City</a>
-
-  <router-outlet></router-outlet>
-
-</div>
+  <div class="d-flex justify-content-center">
+    <!-- <header class="d-flex justify-content-center"> -->
+        <nav class="navbar navbar-expand-lg fixed-top p-0">
+            <div class="container">
+                <div class="navbar-brand mw-15 mh-15">
+                    <img class="img-fluid logo" src="./../assets/icon.png" alt="">
+                </div>
+                <ul class="navbar-nav d-flex ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="./forecast">Weather Forecast</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="./city">Change city</a>
+                    </li>
+                      <span class="nav-link">Light</span>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                      <span class="nav-link">Dark</span>
+                </ul>
+            </div>
+        </nav> 
+    <!-- </header> -->
+    <main class="d-flex pt-5">
+        <div class="d-flex pt-5">
+            <router-outlet></router-outlet>
+        </div>
+    </main>  
+  </div>

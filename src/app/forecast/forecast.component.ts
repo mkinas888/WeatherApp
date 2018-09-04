@@ -10,8 +10,8 @@ import { Response } from '@angular/http';
 export class ForecastComponent implements OnInit {
 
   location = {
-    cityName: 'London',
-    cityCode: 'uk'
+    cityName: 'Warsaw',
+    cityCode: 'pl'
   };
 
   weather:any;
@@ -25,8 +25,8 @@ export class ForecastComponent implements OnInit {
       this.location = JSON.parse(this.value);
     } else {
       this.location = {
-        cityName: 'London',
-        cityCode: 'uk'
+        cityName: 'Warsaw',
+        cityCode: 'pl'
       };
     }
 
