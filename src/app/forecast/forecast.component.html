@@ -1,7 +1,13 @@
 <div class="container weather-card">
-    <h1 class="text-center"> <span>{{ weather.name }}</span> </h1>
-    <div class="container text-center weather-icon">
-        <img class="img fluid icon" src="./../../assets/sunny.png">
+    <h1 class="text-center font-weight-bold"> <span>{{ weather.name }}</span> </h1>
+    <div class="container text-center weather-icon" [ngSwitch]="true">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '01d' || weather.weather[0].icon === '01n'" src="./../../assets/sunny.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '02d' || weather.weather[0].icon === '02n'" src="./../../assets/sunAndClouds.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '03d' || weather.weather[0].icon === '03n' || weather.weather[0].icon === '04d' || weather.weather[0].icon === '04n'" src="./../../assets/clouds.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '09d' || weather.weather[0].icon === '09n' || weather.weather[0].icon === '10d' || weather.weather[0].icon === '10n'" src="./../../assets/rain.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '11d' || weather.weather[0].icon === '11n'" src="./../../assets/storm.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '13d' || weather.weather[0].icon === '13n'" src="./../../assets/snow.png">
+        <img class="img fluid icon" *ngSwitchCase="weather.weather[0].icon === '50d' || weather.weather[0].icon === '50n'" src="./../../assets/mist.png">
     </div>
     <h2> Temperature : <span class="right">{{ weather.main.temp }} <sup>o</sup>C</span> </h2>
     <h2> Cloudness : <span class="right">{{ weather.clouds.all }} %</span> </h2>
